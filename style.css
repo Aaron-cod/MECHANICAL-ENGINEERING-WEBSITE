@@ -157,10 +157,9 @@ main{
     color:rgb(255, 130, 151);
     background-color: rgb(192, 253, 180);
 }
-.container #About-me:hover{
+.container #About-me{
     font-size:1.2em;
     padding: 10px;
-
 }
 #home{
     position: relative;
