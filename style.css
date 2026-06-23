@@ -1,30 +1,74 @@
-.navbar ul{
-    background-color: #34b2d1;
-    list-style-type:none;
-    padding:none;
-    margin:0px;
-    overflow: hidden;
-  
+.navbar {
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 1px 2px 3px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  padding: 15px;
+  justify-content: center;
+  transition: 2ms;
+  align-items: flex-start;
 }
-.navbar a{
-    color:aliceblue;
-    text-decoration:none;
-    display:inline-block;
-    text-align:center;
-    padding: 15px 20px;
-    border-radius: 25px;
-  
+.navelm{
+    line-height: 1.6;
+    transition:0ms;
+    transform: translateY(0);
 }
 
-.navbar a:hover{
-    color:#32a852;
-    background-color: aquamarine;
+.navelm details summary{
+  list-style: none;
+  cursor:pointer;
+  line-height: 1.6;
+  text-shadow:1px 3px 5px ;
 }
-.navbar li{
-    float:left;
+.navelm a{
+    text-decoration: none;
+}
+.navelm ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.navelm li:hover{
+    transform: translateY(-6px);
+    color: #fafdfb;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navelm li{
+    line-height: 1.6;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.navelm details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 120px;
+    font-size: 1.6rem;
+}
+.navelm:hover{
+    transform: translateY(-6px);
+    background-color: #34b2d1;
+    border: 1px solid white;
+    border-radius:5px;
 }
 
 body{
+    line-height: 1.6;
     background: linear-gradient(135deg, #b0fdea 0%, #cfeefb 50%, skyblue 100%);
     background-attachment: fixed;
     margin:0px;
@@ -34,33 +78,36 @@ main{
     margin:20px;
 }
 #heading1{
-    box-shadow: 0 8px #25286b;
+    display: flex;
+    width: fit-content;
+    justify-self: center;
+    background-color: white;
     color:#25286b;
     font-style: initial;
-    border-style: solid;
-    border-color:#25286b;
-    border-radius:20px;
+    border-style: solid 1px;
+    border-radius: 30px;
+    padding:15px;
+    line-height: 1.6;
     text-shadow:-3px -3px 10px
+    
 }
-#heading1:hover{
-    font-size:2.6em;
-}
-#p1{
-    color:#222222;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-#p1::selection{
-    color:rgb(255, 130, 151);
-    background-color: rgb(192, 253, 180);
-}
-#p2{
+.paragraph{
     color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.2em;
 }
-#p2::selection{
-    color:rgb(255, 130, 151);
-    background-color: rgb(192, 253, 180);
+.paragraph::selection{
+    color:rgb(245, 236, 238);
+    background-color: rgb(3, 7, 245);
 }
-#heading2{
+.heading{
+    color:#25286b;
+    font-size:big;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:1px 3px 3px hsl(214, 76%, 67%) ;
+    text-align: center;
+}
+#Fieldsheading{
     color:#25286b;
     font-style: oblique;
 }
@@ -73,67 +120,52 @@ main{
     list-style-type:none;
 }
 #Fields li::selection{
-    color:white;
+    color:rgba(21, 160, 75, 0.87);
     background-color:green;
 }
 #Fields{
     list-style-type:none;
 }
 
-#Electrical_title{
-    color:#25286b;
-    font-size:big;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 0px;  
-} 
-#Electparagraph::selection{
-    color:rgb(255, 130, 151);
-    background-color: rgb(192,253,180);
-}   
-#Biomechanics_title{
-    color:#25286b;
-    font-size:big;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 0px;
-}
-#Biomechanicsparagraph{ 
-    color:black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-#Biomechanicsparagraph::selection{
-    color:rgb(255, 130, 151);
-    background-color: rgb(192, 253, 180);}
+
 
 address{
-    color:rgba(98, 253, 26, 0.9) ;
+    color:rgba(13, 14, 13, 0.9) ;
+    margin: 5px;
+    font-size: 1.4em;
 }    
-#link:hover{
-    color:rgba(255, 208, 0, 0.493);
-    font-size:1.4em;
-}
 #link:active{
-    color:gold;
+    color:rgb(26, 131, 73);
     font-family: 'Courier New', Courier, monospace;
 }
 #link:visited{
-    color:red;
+    color:rgb(255, 255, 255);
 }
-
+#link{
+    color:blue;
+}
 footer{
-    background-color:#6d7971;
-    box-shadow:0 8px black;
-    border:solid   
-    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    gap: 5px;
+
+    background-color:white;
+    margin-right: 50px;
+    box-shadow:6px 8px 5px 1px rgb(2, 194, 201);
+    width:100%;
+    border-radius:  5px;
+    padding:5px;
+    text-align: center;
 }
 
 /*Begining of the  second page:About page  */
 #Page_two_header{
     color:purple;
     text-align: center;
-
 }
 main{
-    margin: 20px;
+    margin: 10px;
 }
 .container{
     background-color: #34b2d1;
@@ -154,67 +186,27 @@ main{
   
 }
 .container #About-me::selection{
-    color:rgb(255, 130, 151);
-    background-color: rgb(192, 253, 180);
+    color:rgb(245, 236, 238);
+    background-color: rgb(3, 7, 245);
 }
 .container #About-me{
     font-size:1.2em;
     padding: 10px;
+    line-height: 1.6;
 }
-#home{
+.home{
     position: relative;
     background-color:rgb(87, 195, 237);
     margin:30px;
     border: #34b2d1;
     border-radius: 10px;
     text-decoration: none;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2 ease ;
+}
+.home:hover{
+    transform: scale(1.1);
 }
 /*Ending of second webpage*/
-#Robotics-title{
-    color:#25286b;
-    font-size:big;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 0px;
-}
-#Robotics-para{
-     color:black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-#Robotics-para::selection{ 
-    color:rgb(255, 130, 151);
-    background-color: rgb(192, 253, 180);
-}
-
-/*Beginning of third webpage*/
-#Contact{
-    text-align:center;
-    font-size:2.7em;
-    color:purple;
-    border: #222222;
-    border-radius: 30px;
-    background-color: #32a852;
-}
-.Contact-info ul{
-    list-style-type:none;
-    padding:0;
-    margin:0;
-    text-align:center;
-}
-.Contact-info a{
-    text-decoration:none;
-    color:#32a852;
-    font-size:1.6em;
-}
-.Contact-info a:hover{
-    text-decoration: underline;
-    color:orange;
-    font-size:1.4em;
-}
-#home{
-    position: relative;
-    background-color:rgb(87, 195, 237);
-    margin:30px;
-    border: #34b2d1;
-    border-radius: 10px;
-    text-decoration: none;
-}
